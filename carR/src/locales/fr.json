@@ -1,0 +1,47 @@
+{
+  "nav": { "home": "Accueil", "buy": "Acheter", "sell": "Vendre", "about": "À propos" },
+  "language": { "title": "Choisir la langue" },
+
+  "home": {
+    "breadcrumb": { "city": "Dubaï", "motors": "Moteurs", "usedCars": "Voitures d'occasion" },
+    "title": "Porsche d'occasion à vendre à Dubaï",
+    "ads": "{{count}} annonces",
+    "sort": "Trier :",
+    "default": "Par défaut",
+    "saveSearch": "Sauvegarder la recherche",
+    "loadMore": "Charger plus d’annonces"
+  },
+
+  "search": {
+    "city": "Ville",
+    "makeModel": "Marque et modèle",
+    "makeModelPlaceholder": "Rechercher marque, modèle ou finition",
+    "priceRange": "Fourchette de prix",
+    "selectPrice": "Choisir le prix",
+    "year": "Année",
+    "selectYear": "Choisir l’année",
+    "kilometers": "Kilométrage",
+    "selectRange": "Choisir une plage",
+    "filters": "Filtres",
+    "filtersPlaceholder": "Spécifications régionales, mots-clés..."
+  },
+
+  "models": {
+    "carrera": "Carrera / 911",
+    "cayenne": "Cayenne",
+    "macan": "Macan",
+    "panamera": "Panamera",
+    "cayman": "Cayman",
+    "boxster": "Boxster",
+    "taycan": "Taycan"
+  },
+
+  "car": {
+    "carOfWeek": "VOITURE DE LA SEMAINE",
+    "approved": "APPROUVÉ",
+    "premium": "PREMIUM",
+    "km": "km",
+    "viewDetails": "Voir détails →",
+    "aed": "AED"
+  }
+}

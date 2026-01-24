@@ -1,0 +1,47 @@
+{
+  "nav": { "home": "Home", "buy": "Buy", "sell": "Sell", "about": "About Us" },
+  "language": { "title": "Choose language" },
+
+  "home": {
+    "breadcrumb": { "city": "Dubai", "motors": "Motors", "usedCars": "Used Cars" },
+    "title": "Used Porsche Cars for Sale in Dubai",
+    "ads": "{{count}} Ads",
+    "sort": "Sort:",
+    "default": "Default",
+    "saveSearch": "Save Search",
+    "loadMore": "Load More Listings"
+  },
+
+  "search": {
+    "city": "City",
+    "makeModel": "Make and Model",
+    "makeModelPlaceholder": "Search Make, Model, or Trim",
+    "priceRange": "Price Range",
+    "selectPrice": "Select Price",
+    "year": "Year",
+    "selectYear": "Select Year",
+    "kilometers": "Kilometers",
+    "selectRange": "Select Range",
+    "filters": "Filters",
+    "filtersPlaceholder": "Regional Specs, Keywords..."
+  },
+
+  "models": {
+    "carrera": "Carrera / 911",
+    "cayenne": "Cayenne",
+    "macan": "Macan",
+    "panamera": "Panamera",
+    "cayman": "Cayman",
+    "boxster": "Boxster",
+    "taycan": "Taycan"
+  },
+
+  "car": {
+    "carOfWeek": "CAR OF THE WEEK",
+    "approved": "APPROVED",
+    "premium": "PREMIUM",
+    "km": "km",
+    "viewDetails": "View Details →",
+    "aed": "AED"
+  }
+}

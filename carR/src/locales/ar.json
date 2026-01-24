@@ -1,0 +1,47 @@
+{
+  "nav": { "home": "الرئيسية", "buy": "شراء", "sell": "بيع", "about": "من نحن" },
+  "language": { "title": "اختر اللغة" },
+
+  "home": {
+    "breadcrumb": { "city": "دبي", "motors": "المحركات", "usedCars": "سيارات مستعملة" },
+    "title": "سيارات بورش مستعملة للبيع في دبي",
+    "ads": "{{count}} إعلان",
+    "sort": "الترتيب:",
+    "default": "افتراضي",
+    "saveSearch": "حفظ البحث",
+    "loadMore": "تحميل المزيد"
+  },
+
+  "search": {
+    "city": "المدينة",
+    "makeModel": "الماركة والموديل",
+    "makeModelPlaceholder": "ابحث عن الماركة أو الموديل أو الفئة",
+    "priceRange": "نطاق السعر",
+    "selectPrice": "اختر السعر",
+    "year": "السنة",
+    "selectYear": "اختر السنة",
+    "kilometers": "الكيلومترات",
+    "selectRange": "اختر النطاق",
+    "filters": "فلاتر",
+    "filtersPlaceholder": "مواصفات، كلمات مفتاحية..."
+  },
+
+  "models": {
+    "carrera": "كاريرا / 911",
+    "cayenne": "كايين",
+    "macan": "ماكان",
+    "panamera": "باناميرا",
+    "cayman": "كايمن",
+    "boxster": "بوكستر",
+    "taycan": "تايكان"
+  },
+
+  "car": {
+    "carOfWeek": "سيارة الأسبوع",
+    "approved": "معتمد",
+    "premium": "مميز",
+    "km": "كم",
+    "viewDetails": "عرض التفاصيل →",
+    "aed": "درهم"
+  }
+}
