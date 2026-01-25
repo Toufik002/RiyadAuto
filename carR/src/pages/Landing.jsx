@@ -3,7 +3,7 @@ import { useI18n } from "../i18n/I18nProvider";
 import Hero from "../components/Hero";
 import InfiniteSliderBasic from "../components/InfiniteSliderBasic";
 import ActionCardsSection from "../components/ActionCardsSection";
-
+import GlowingEffectDemo from "../components/GlowingEffectDemo";
 export default function Landing() {
   const { t } = useI18n();
 
@@ -15,6 +15,7 @@ export default function Landing() {
 
       <ActionCardsSection />
       <InfiniteSliderBasic />
+      <GlowingEffectDemo />
     </div>
   );
 }
