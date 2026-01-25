@@ -4,6 +4,7 @@ import Hero from "../components/Hero";
 import InfiniteSliderBasic from "../components/InfiniteSliderBasic";
 import ActionCardsSection from "../components/ActionCardsSection";
 import GlowingEffectDemo from "../components/GlowingEffectDemo";
+import Footer from "../components/Footer";
 export default function Landing() {
   const { t } = useI18n();
 
@@ -16,6 +17,7 @@ export default function Landing() {
       <ActionCardsSection />
       <InfiniteSliderBasic />
       <GlowingEffectDemo />
+      <Footer />
     </div>
   );
 }
