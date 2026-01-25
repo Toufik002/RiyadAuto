@@ -32,7 +32,7 @@ export default function ActionCardsSection() {
                         buttonText="Contactez nous"
                         buttonVariant="outline"
                         hoverColor="blue"
-                        icon={<Icon icon="solar:headset-linear" className="h-10 w-10 text-slate-900" />}
+                        icon={<Icon icon="solar:phone-calling-linear" className="h-10 w-10 text-slate-900" />}
                         onButtonClick={() => { }}
                     />
                 </div>
