@@ -19,14 +19,15 @@ export default function Footer() {
         <>
             {/* Floating Chat Button (Bottom Left) */}
             <div className="fixed bottom-6 left-6 z-50">
-                <button
-                    type="button"
+                <a
+                    href="https://wa.me/212701070727"
+                    target="_blank"
+                    rel="noreferrer noopener"
                     className="bg-red-600 hover:bg-red-700 text-white p-3.5 rounded-full shadow-xl transition-all hover:scale-105 flex items-center justify-center"
-                    aria-label="Chat"
-                    onClick={() => alert("Chat coming soon")}
+                    aria-label="Chat on WhatsApp"
                 >
                     <MessageSquareMore className="w-7 h-7" strokeWidth={1.5} />
-                </button>
+                </a>
             </div>
 
             {/* Main Footer */}
