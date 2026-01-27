@@ -8,8 +8,8 @@ function Badge({ children, variant = "red" }) {
     variant === "blue"
       ? "bg-blue-600 text-white"
       : variant === "gray"
-      ? "bg-gray-900 text-white"
-      : "bg-red-600 text-white";
+        ? "bg-gray-900 text-white"
+        : "bg-red-600 text-white";
   return (
     <span className={"px-3 py-1 rounded-full text-xs font-bold " + styles}>
       {children}

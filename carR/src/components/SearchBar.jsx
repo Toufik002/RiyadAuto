@@ -19,7 +19,7 @@ function PillSelector({ label, options, value, onChange, placeholder }) {
   return (
     <div className="space-y-2 relative" ref={wrapperRef}>
       <label className="text-xs font-bold text-gray-700 uppercase tracking-wide">{label}</label>
-      <div 
+      <div
         onClick={() => setIsOpen(!isOpen)}
         className="w-full h-11 flex items-center justify-between rounded-md border border-gray-300 bg-gray-50 px-3 text-sm text-gray-700 cursor-pointer hover:border-gray-400 select-none"
       >
@@ -29,17 +29,17 @@ function PillSelector({ label, options, value, onChange, placeholder }) {
 
       {isOpen && (
         <div className="absolute top-full left-0 mt-2 w-[320px] z-50 bg-white border border-gray-200 rounded-xl shadow-xl p-4">
-           <div className="flex flex-wrap gap-2">
-              {options.map((option) => (
-                <button
-                  key={option}
-                  onClick={() => { onChange(option); setIsOpen(false); }}
-                  className={`px-4 py-2 rounded-full text-xs font-medium border transition-all ${value === option ? "bg-blue-50 border-blue-500 text-blue-600 shadow-sm" : "bg-white border-gray-200 text-gray-600 hover:bg-gray-50"}`}
-                >
-                  {option}
-                </button>
-              ))}
-           </div>
+          <div className="flex flex-wrap gap-2">
+            {options.map((option) => (
+              <button
+                key={option}
+                onClick={() => { onChange(option); setIsOpen(false); }}
+                className={`px-4 py-2 rounded-full text-xs font-medium border transition-all ${value === option ? "bg-blue-50 border-blue-500 text-blue-600 shadow-sm" : "bg-white border-gray-200 text-gray-600 hover:bg-gray-50"}`}
+              >
+                {option}
+              </button>
+            ))}
+          </div>
         </div>
       )}
     </div>
@@ -66,7 +66,7 @@ function RangeSelector({ label, fromValue, toValue, onFromChange, onToChange, pl
   return (
     <div className="space-y-2 relative" ref={wrapperRef}>
       <label className="text-xs font-bold text-gray-700 uppercase tracking-wide">{label}</label>
-      <div 
+      <div
         onClick={() => setIsOpen(!isOpen)}
         className="w-full h-11 flex items-center justify-between rounded-md border border-gray-300 bg-gray-50 px-3 text-sm text-gray-700 cursor-pointer hover:border-gray-400 select-none"
       >
@@ -98,7 +98,7 @@ function RangeSelector({ label, fromValue, toValue, onFromChange, onToChange, pl
               />
             </div>
           </div>
-          <button 
+          <button
             onClick={() => setIsOpen(false)}
             className="w-full mt-4 py-2 bg-gray-900 text-white text-xs font-bold rounded-lg hover:bg-black transition-colors"
           >
@@ -114,7 +114,7 @@ export default function SearchBar() {
   const { t } = useI18n();
   const [city, setCity] = useState("Dubai");
   const [year, setYear] = useState(null);
-  
+
   const [priceFrom, setPriceFrom] = useState("");
   const [priceTo, setPriceTo] = useState("");
   const [kmFrom, setKmFrom] = useState("");
@@ -126,7 +126,7 @@ export default function SearchBar() {
   return (
     <div className="bg-white border border-gray-200 rounded-xl shadow-sm p-6">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4 items-start">
-        
+
         {/* CITY */}
         <PillSelector label={t("search.city")} options={cityOptions} value={city} onChange={setCity} placeholder={t("home.breadcrumb.city")} />
 
@@ -137,9 +137,9 @@ export default function SearchBar() {
         </div>
 
         {/* PRICE RANGE */}
-        <RangeSelector 
-          label={t("search.priceRange")} 
-          fromValue={priceFrom} 
+        <RangeSelector
+          label={t("search.priceRange")}
+          fromValue={priceFrom}
           toValue={priceTo}
           onFromChange={setPriceFrom}
           onToChange={setPriceTo}
@@ -150,9 +150,9 @@ export default function SearchBar() {
         <PillSelector label={t("search.year")} options={yearOptions} value={year} onChange={setYear} placeholder={t("search.selectYear")} />
 
         {/* KILOMETERS */}
-        <RangeSelector 
-          label={t("search.kilometers")} 
-          fromValue={kmFrom} 
+        <RangeSelector
+          label={t("search.kilometers")}
+          fromValue={kmFrom}
           toValue={kmTo}
           onFromChange={setKmFrom}
           onToChange={setKmTo}

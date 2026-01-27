@@ -8,12 +8,12 @@ export default function Header() {
   const menuRef = useRef(null);
 
   const LANGS = [
-    { code: "ar", label: "العربية", badge: "AR", dir: "rtl" },
-    { code: "fr", label: "Français", badge: "FR", dir: "ltr" },
-    { code: "en", label: "English", badge: "EN", dir: "ltr" },
+    { code: "ar", labelKey: "language.ar", badge: "AR" },
+    { code: "fr", labelKey: "language.fr", badge: "FR" },
+    { code: "en", labelKey: "language.en", badge: "EN" }, // optional but helpful
   ];
 
-  const current = LANGS.find((l) => l.code === lang) || LANGS[2];
+  const current = LANGS.find((l) => l.code === lang) || LANGS[1];
 
   useEffect(() => {
     function onDocClick(e) {
@@ -37,10 +37,10 @@ export default function Header() {
   };
 
   const navItems = [
-    { key: "nav.home", to: "/" },       // Landing
-    { key: "nav.buy", to: "/buy" },     // Buy page (Home)
-    { key: "nav.sell", to: "/sell" },   // Sell page
-    { key: "nav.about", to: "/about" }, // About page
+    { key: "nav.home", to: "/" },
+    { key: "nav.buy", to: "/buy" },
+    { key: "nav.sell", to: "/sell" },
+    { key: "nav.about", to: "/about" },
   ];
 
   return (
@@ -52,7 +52,9 @@ export default function Header() {
             <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center">
               <span className="text-white font-bold text-xl">R</span>
             </div>
-            <span className="text-xl font-bold text-gray-900">RiyadAuto</span>
+            <span className="text-xl font-bold text-gray-900">
+              {t("brand.name")}
+            </span>
           </div>
 
           {/* Navigation */}
@@ -63,9 +65,7 @@ export default function Header() {
                 to={item.to}
                 className={({ isActive }) =>
                   "font-medium transition-colors " +
-                  (isActive
-                    ? "text-red-600"
-                    : "text-gray-700 hover:text-red-600")
+                  (isActive ? "text-red-600" : "text-gray-700 hover:text-red-600")
                 }
               >
                 {t(item.key)}
@@ -87,7 +87,7 @@ export default function Header() {
               <span className="inline-flex items-center justify-center w-9 h-7 rounded-md bg-white/15 border border-white/20 text-sm font-bold">
                 {current.badge}
               </span>
-              <span className="hidden sm:inline">{current.label}</span>
+              <span className="hidden sm:inline">{t(current.labelKey)}</span>
               <svg
                 className={`w-4 h-4 transition-transform ${open ? "rotate-180" : ""}`}
                 viewBox="0 0 20 20"
@@ -113,14 +113,14 @@ export default function Header() {
                     <button
                       key={l.code}
                       onClick={() => changeLang(l.code)}
-                      className={`w-full px-4 py-2 flex items-center gap-3 text-left hover:bg-gray-50 transition-colors ${
-                        current.code === l.code ? "bg-gray-50" : ""
-                      }`}
+                      className={`w-full px-4 py-2 flex items-center gap-3 text-left hover:bg-gray-50 transition-colors ${current.code === l.code ? "bg-gray-50" : ""
+                        }`}
+                      type="button"
                     >
                       <span className="inline-flex items-center justify-center w-9 h-7 rounded-md bg-gray-100 border border-gray-200 text-sm font-bold text-gray-800">
                         {l.badge}
                       </span>
-                      <span className="font-medium text-gray-800">{l.label}</span>
+                      <span className="font-medium text-gray-800">{t(l.labelKey)}</span>
                     </button>
                   ))}
                 </div>

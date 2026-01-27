@@ -23,8 +23,8 @@ function SmallBadge({ children, variant = "gray" }) {
     variant === "green"
       ? "bg-green-100 text-green-700"
       : variant === "blue"
-      ? "bg-blue-100 text-blue-700"
-      : "bg-gray-100 text-gray-700";
+        ? "bg-blue-100 text-blue-700"
+        : "bg-gray-100 text-gray-700";
   return (
     <span className={`px-3 py-1 rounded-full text-xs font-semibold ${cls}`}>
       {children}
