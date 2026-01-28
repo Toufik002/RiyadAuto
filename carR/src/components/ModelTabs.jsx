@@ -11,7 +11,7 @@ export default function ModelTabs({ activeModel, onModelChange }) {
     { key: "panamera", count: 85 },
     { key: "cayman", count: 66 },
     { key: "boxster", count: 53 },
-    { key: "taycan", count: 34 },
+    { key: "taycan", count: 34 }
   ];
 
   return (
@@ -30,7 +30,6 @@ export default function ModelTabs({ activeModel, onModelChange }) {
                     ? "border-blue-600 text-blue-600 bg-blue-50"
                     : "border-transparent text-gray-600 hover:text-blue-600 hover:bg-gray-50")
                 }
-                type="button"
               >
                 {t(`models.${m.key}`)}{" "}
                 <span className="ml-1 text-gray-500 font-medium">({m.count})</span>

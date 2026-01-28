@@ -5,14 +5,16 @@ const I18nContext = createContext(null);
 
 export function I18nProvider({ children }) {
   const [lang, setLang] = useState(() => localStorage.getItem("lang") || "en");
-
   const dict = translations[lang] || translations.en;
 
   const t = (key, vars) => {
     const parts = key.split(".");
     let cur = dict;
     for (const p of parts) cur = cur?.[p];
-    if (typeof cur === "function") return cur(vars?.count);
+    if (typeof cur === "function") {
+      const params = typeof vars === "object" ? vars : { count: vars };
+      return cur(params);
+    }
     if (typeof cur === "string") return cur;
     return key;
   };

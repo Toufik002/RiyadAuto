@@ -6,7 +6,7 @@ import Buy from "./pages/Buy"
 // import Sell from "./pages/Sell";
 // import About from "./pages/About";
 import CarDetails from "./pages/CarDetails";
-
+import Vendre from "./pages/Vendre";
 export default function App() {
   return (
     <Routes>
@@ -19,8 +19,8 @@ export default function App() {
       {/* Car Details */}
       <Route path="/car/:id" element={<CarDetails />} />
 
-      {/* Sell */}
-      {/* <Route path="/sell" element={<Sell />} /> */}
+      Sell
+      <Route path="/sell" element={<Vendre />} />
 
       {/* About */}
       {/* <Route path="/about" element={<About />} /> */}

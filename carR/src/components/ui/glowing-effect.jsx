@@ -1,7 +1,6 @@
 import React, { memo, useCallback, useEffect, useRef } from "react";
 import { animate } from "framer-motion";
 
-// cn بسيطة
 function cn(...classes) {
     return classes.filter(Boolean).join(" ");
 }
@@ -12,7 +11,7 @@ const GlowingEffect = memo(
         inactiveZone = 0.7,
         proximity = 0,
         spread = 20,
-        variant = "default", // "default" | "white"
+        variant = "default",
         glow = false,
         className,
         movementDuration = 2,
@@ -120,7 +119,6 @@ const GlowingEffect = memo(
 
         return (
             <>
-                {/* static border fallback (same as original) */}
                 <div
                     className={cn(
                         "pointer-events-none absolute -inset-px hidden rounded-[inherit] border opacity-0 transition-opacity",
