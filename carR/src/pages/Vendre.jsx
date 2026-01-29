@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import FeaturesRow from "../components/FeaturesRow";
 import HowItWorksSection from "../components/HowItWorksSection";
 import AppointmentModal from "../components/AppointmentModal";
+import FAQKifalStyle from "../components/FAQKifalStyle";
 
 export default function Vendre() {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -23,6 +24,7 @@ export default function Vendre() {
             <HeroVendre onOpenModal={handleOpenModal} />
             <FeaturesRow />
             <HowItWorksSection onOpenModal={handleOpenModal} />
+            <FAQKifalStyle />
             <Footer />
 
             <AppointmentModal
