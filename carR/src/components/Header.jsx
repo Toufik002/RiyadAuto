@@ -40,7 +40,7 @@ export default function Header() {
     { key: "nav.home", to: "/" },       // Landing
     { key: "nav.buy", to: "/buy" },     // Buy page (Home)
     { key: "nav.sell", to: "/sell" },   // Sell page
-    { key: "nav.about", to: "/about" }, // About page
+    { key: "nav.about", to: "/expertise" }, // About page
   ];
 
   return (

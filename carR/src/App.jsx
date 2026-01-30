@@ -7,6 +7,7 @@ import Buy from "./pages/Buy"
 // import About from "./pages/About";
 import CarDetails from "./pages/CarDetails";
 import Vendre from "./pages/Vendre";
+import ExpertiseAuto from "./pages/ExpertiseAuto";
 export default function App() {
   return (
     <Routes>
@@ -22,8 +23,8 @@ export default function App() {
       Sell
       <Route path="/sell" element={<Vendre />} />
 
-      {/* About */}
-      {/* <Route path="/about" element={<About />} /> */}
+      About
+      <Route path="/expertise" element={<ExpertiseAuto />} />
 
       {/* أي route خاريج رجعو للـ Landing */}
       <Route path="*" element={<Navigate to="/" replace />} />
