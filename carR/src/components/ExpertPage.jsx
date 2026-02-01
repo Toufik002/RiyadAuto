@@ -1,74 +1,67 @@
 import React from "react";
-import { Icon } from "@iconify/react";
 import AppointmentFormCard from "../components/AppointmentFormCard";
+import ExpertValueCardsSection from "../components/ExpertValueCardsSection"
+
+
+const Highlight = ({ children, className = "" }) => (
+    <span className={`relative inline-block ${className}`}>
+        <span className="absolute inset-x-0 bottom-1 top-1 bg-red-600 -skew-x-12 transform"></span>
+        <span className="relative z-10 text-white px-3 py-1 font-extrabold italic">
+            {children}
+        </span>
+    </span>
+);
 
 export default function ExpertPage() {
     return (
-        <section className="relative bg-white text-slate-900">
-            <main className="relative z-10 mx-auto max-w-7xl px-6 pt-20 pb-10 lg:pt-32 lg:pb-16">
-                <div className="grid items-center gap-16 lg:grid-cols-2 lg:gap-24">
+        <>
+            <section className="relative bg-white text-slate-900 overflow-hidden">
+                {/* Subtle background decoration if needed, but keeping it clean for now */}
+                <main className="relative z-10 mx-auto max-w-[90rem] px-6 py-16 lg:py-24 lg:px-12">
+                    <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+                        {/* LEFT TEXT */}
+                        <div className="max-w-2xl">
+                            <div className="space-y-2">
+                                <h1 className="text-4xl font-extrabold leading-[1.15] tracking-tight sm:text-5xl lg:text-6xl text-[#0f172a]">
+                                    Vous souhaitez acheter une{" "}
+                                    <br />
+                                    <Highlight className="mt-2">voiture d&apos;occasion</Highlight>
+                                    <br />
+                                    qui n&apos;est pas sur notre site ?
+                                </h1>
+                            </div>
 
-                    {/* LEFT */}
-                    <div className="relative">
-                        <h1 className="mb-8 text-4xl lg:text-6xl font-bold tracking-tight leading-[1.15] text-slate-900">
-                            Vous souhaitez acheter une{" "}
-                            <span className="bg-red-600 text-white px-2 transform -skew-x-6 inline-block">
-                                voiture
-                            </span>{" "}
-                            qui n&apos;est pas sur notre site ?
-                            <br />
-                            Faites-vous accompagner par un expert{" "}
-                            <span className="bg-red-600 text-white px-2 transform -skew-x-6 inline-block">
-                                RiyadAuto
-                            </span>{" "}
-                            en toute tranquillité
-                        </h1>
+                            <div className="mt-3 space-y-3">
+                                <h2 className="text-2xl font-bold leading-tight sm:text-3xl text-[#0f172a]">
+                                    Faites vous accompagner par un expert{" "}
+                                    <Highlight>RiyadAuto</Highlight> pour acheter en toute{" "}
+                                    <Highlight>tranquillité</Highlight>
+                                </h2>
 
-                        <p className="mb-10 max-w-xl text-lg text-slate-600 leading-relaxed">
-                            Notre expert se déplace sur le lieu de votre choix pour contrôler la mécanique,
-                            la carrosserie, effectuer un diagnostic électronique et s’assurer qu’il n’y a
-                            pas de blocage administratif.
-                        </p>
+                                <p className="max-w-xl text-lg leading-relaxed text-slate-600">
+                                    Notre expert se déplace sur le lieu de votre choix pour contrôler la mécanique,
+                                    la carrosserie, effectuer un diagnostic électronique et s&apos;assurer qu&apos;il
+                                    n&apos;y a pas de blocage administratif.
+                                </p>
+                            </div>
+                        </div>
 
-                        <div className="flex flex-col sm:flex-row gap-4">
-                            <button
-                                type="button"
-                                onClick={() => {
-                                    // scroll to form on right (nice UX)
-                                    const el = document.getElementById("expert-form");
-                                    el?.scrollIntoView({ behavior: "smooth", block: "start" });
-                                }}
-                                className="group flex h-14 items-center justify-center gap-2 rounded-lg bg-red-600 px-8 text-base font-medium text-white shadow-xl shadow-red-200 transition-all hover:bg-red-700"
-                            >
-                                Remplir le formulaire
-                                <Icon
-                                    icon="solar:arrow-right-linear"
-                                    className="transition-transform group-hover:translate-x-1"
+                        {/* FORM (centered) */}
+                        <div className="flex justify-center lg:justify-end">
+                            <div className="w-full max-w-lg">
+                                <AppointmentFormCard
+                                    onSubmit={(data) => {
+                                        console.log("FORM DATA:", data);
+                                    }}
                                 />
-                            </button>
-
-                            <div className="flex items-center gap-2 text-sm text-slate-500">
-                                <Icon icon="solar:shield-check-linear" className="h-5 w-5" />
-                                <span>Réponse rapide • Service sécurisé</span>
                             </div>
                         </div>
                     </div>
+                </main>
+            </section>
+            <ExpertValueCardsSection />
+        </>
 
-                    {/* RIGHT (FORM) */}
-                    <div
-                        id="expert-form"
-                        className="relative flex items-center justify-center lg:justify-end"
-                    >
-                        <div className="w-full max-w-md">
-                            <AppointmentFormCard
-                                onSubmit={(data) => {
-                                    console.log("FORM DATA:", data);
-                                }}
-                            />
-                        </div>
-                    </div>
-                </div>
-            </main>
-        </section>
     );
+
 }
